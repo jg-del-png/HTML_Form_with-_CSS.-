@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form Results</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+
+<body>
+    <h1>Your Submitted Information</h1>
+
+    <div id="results"></div>
+
+    <button id="backButton" onclick="window.location.href='index.html'">Back to Form</button>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const resultsDiv = document.getElementById("results");
+
+        params.forEach((value, key) => {
+            const p = document.createElement("p");
+            p.textContent = `${key}: ${value}`;
+            resultsDiv.appendChild(p);
+        });
+    </script>
+</body>
+</html>

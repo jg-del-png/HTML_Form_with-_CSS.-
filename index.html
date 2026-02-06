@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Styled Form Assignment</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+
+<body>
+    <h1>User Information Form</h1>
+
+    <form id="userForm" action="result.html" method="GET">
+
+        <label>Full Name:
+            <input type="text" name="fullname" required>
+        </label>
+
+        <label>Email:
+            <input type="email" name="email" required>
+        </label>
+
+        <label>Phone Number:
+            <input type="tel" name="phone">
+        </label>
+
+        <label>Age:
+            <input type="number" name="age" min="1">
+        </label>
+
+        <label>Birthdate:
+            <input type="date" name="birthdate">
+        </label>
+
+        <fieldset>
+            <legend>Preferred Contact Method</legend>
+            <label><input type="radio" name="contact" value="Email"> Email</label>
+            <label><input type="radio" name="contact" value="Phone"> Phone</label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Interests</legend>
+            <label><input type="checkbox" name="interests" value="Coding"> Coding</label>
+            <label><input type="checkbox" name="interests" value="Art"> Art</label>
+            <label><input type="checkbox" name="interests" value="Gaming"> Gaming</label>
+        </fieldset>
+
+        <label>Favorite Color:
+            <select name="color">
+                <option value="Red">Red</option>
+                <option value="Blue">Blue</option>
+                <option value="Green">Green</option>
+            </select>
+        </label>
+
+        <label>Additional Notes:
+            <textarea name="notes" rows="4"></textarea>
+        </label>
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
